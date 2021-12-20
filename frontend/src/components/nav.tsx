@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './nav.css';
 import Cookies from "js-cookie"
-const Nav = (props: { name: string, setName: (name: string) => void }) => {
+const Nav = (props: { name: string, setName: (name: string) => void , setUserID: (userID: string) => void }) => {
 
     const logout = async () => {
         await fetch('http://localhost:8000/api/signout', {
@@ -12,6 +12,7 @@ const Nav = (props: { name: string, setName: (name: string) => void }) => {
         });
 
         props.setName('');
+        props.setUserID("0");
     }
 
     let menu;

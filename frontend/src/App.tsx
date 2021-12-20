@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from './logo.svg';
 import './App.css';
 import SignIn from "./pages/Signin"
 import Register from "./pages/Register"
@@ -7,7 +6,7 @@ import Nav from './components/nav';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Home from './pages/Home';
 import { } from 'react-router-dom';
-import Cookies from "js-cookie"
+
 function App() {
   const [name, setName] = useState("")
   const [userId, setUserID] = useState("0")
@@ -41,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav name={name} setName={setName} />
+        <Nav name={name} setName={setName} setUserID = {setUserID}/>
         <main className="form-signin">
 
 
