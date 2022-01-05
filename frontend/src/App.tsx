@@ -13,7 +13,7 @@ function App() {
 
 
   useEffect(() => {
-    if (name == "" || name == undefined) {
+    if (name !== "" || name !== undefined) {
       (
 
         async () => {
@@ -23,11 +23,12 @@ function App() {
           });
 
           const content = await response.json();
-          console.log(content)
+          //console.log(content)
           if (content.message !== "unauthenticated") {
             setName(content.name);
             setUserID(content.id)
           }
+          
 
         }
       )();

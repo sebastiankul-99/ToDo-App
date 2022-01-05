@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './nav.css';
-import Cookies from "js-cookie"
 const Nav = (props: { name: string, setName: (name: string) => void , setUserID: (userID: string) => void }) => {
 
     const logout = async () => {
