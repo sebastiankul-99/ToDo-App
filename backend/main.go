@@ -1,10 +1,10 @@
 package main
 
 import (
-	database "./Database"
-	routes "./Routes"
-	"github.com/gofiber/fiber"
-	"github.com/gofiber/fiber/middleware/cors"
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	database "github.com/sebastiankul-99/ToDo-App/Database"
+	routes "github.com/sebastiankul-99/ToDo-App/Routes"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package database
 
 import (
-	models "../Models"
+	models "github.com/sebastiankul-99/ToDo-App/Models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -9,9 +9,9 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	username := ""
-	password := ""
-	database := ""
+	username := "root"
+	password := "seba123321"
+	database := "todo_app"
 	connection, err := gorm.Open(mysql.Open(username+":"+password+"@/"+database), &gorm.Config{})
 	if err != nil {
 		panic("Couldnt connect to database")

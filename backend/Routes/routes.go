@@ -1,8 +1,8 @@
 package routes
 
 import (
-	controllers "../Controllers"
-	"github.com/gofiber/fiber"
+	"github.com/gofiber/fiber/v2"
+	controllers "github.com/sebastiankul-99/ToDo-App/Controllers"
 )
 
 func Setup(app *fiber.App) {
