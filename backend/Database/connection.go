@@ -9,9 +9,9 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	username := "root"
-	password := "seba123321"
-	database := "todo_app"
+	username := ""
+	password := ""
+	database := ""
 	connection, err := gorm.Open(mysql.Open(username+":"+password+"@/"+database), &gorm.Config{})
 	if err != nil {
 		panic("Couldnt connect to database")
