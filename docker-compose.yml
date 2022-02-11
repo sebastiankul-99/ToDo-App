@@ -1,0 +1,37 @@
+version: '3' 
+services:
+  mysql-db-todo:
+    build:
+      context: ./db
+    container_name: mysql-container
+    ports:
+      - 3307:3306
+    volumes:
+      - /var/lib/mysql
+    environment:
+      network_mode: "host"
+  backend: 
+    container_name: "backend-go-todoApp"  
+    depends_on: 
+    - mysql-db-todo
+    build:
+      context: ./backend  
+    ports:
+      - 8000:8000
+    environment: 
+      network_mode: "host"
+    links:
+     - mysql-db-todo 
+  frontend: 
+    container_name: "frontend-react-todoApp"  
+    depends_on:  
+    - backend
+    build:
+      context: ./frontend  
+    ports:
+      - 3001:80
+    environment: 
+      network_mode: "host" 
+
+
+    
