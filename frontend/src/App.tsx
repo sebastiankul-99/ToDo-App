@@ -17,7 +17,7 @@ function App() {
       (
 
         async () => {
-          const response = await fetch('http://localhost:8000/api/user', {
+          const response = await fetch('https://backend.todoapp-namespace:8000/api/user', {
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
           });

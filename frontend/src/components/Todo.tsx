@@ -11,7 +11,7 @@ const Todo = (props: { id: any, text: any, userId: any, status: any, setTodos: (
     Id = props.id.toString()
     console.log("Id = " + Id)
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/deletetask", {
+    const response = await fetch("https://backend.todoapp-namespace:8000/api/deletetask", {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -37,7 +37,7 @@ const Todo = (props: { id: any, text: any, userId: any, status: any, setTodos: (
     }
     console.log("status po zmianie to: " + status)
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/changetaskstatus", {
+    const response = await fetch("https://backend.todoapp-namespace:8000/api/changetaskstatus", {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

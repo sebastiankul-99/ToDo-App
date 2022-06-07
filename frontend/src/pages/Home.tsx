@@ -21,7 +21,7 @@ const Home = (props: { name: string, userID: string, setName: (name: string) => 
       var content;
 
       if (status != "All") {
-        const response = await fetch("http://localhost:8000/api/viewtasks", {
+        const response = await fetch("https://backend.todoapp-namespace:8000/api/viewtasks", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -33,7 +33,7 @@ const Home = (props: { name: string, userID: string, setName: (name: string) => 
         content = conten
       }
       else {
-        const response = await fetch("http://localhost:8000/api/viewalltasks", {
+        const response = await fetch("http://backend.todoapp-namespace:8000/api/viewalltasks", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -73,7 +73,7 @@ const Home = (props: { name: string, userID: string, setName: (name: string) => 
       var content;
       console.log(props.userID.toString() + " status =" + str)
       if (str != "All") {
-        const response = await fetch("http://localhost:8000/api/viewtasks", {
+        const response = await fetch("https://backend.todoapp-namespace:8000/api/viewtasks", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -85,7 +85,7 @@ const Home = (props: { name: string, userID: string, setName: (name: string) => 
         content = conten
       }
       else {
-        const response = await fetch("http://localhost:8000/api/viewalltasks", {
+        const response = await fetch("https://backend.todoapp-namespace:8000/api/viewalltasks", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -120,7 +120,7 @@ const Home = (props: { name: string, userID: string, setName: (name: string) => 
       
       if (taskName !== "" && props.userID != "0") {
   
-        const response = await fetch("http://localhost:8000/api/addtask", {
+        const response = await fetch("https://backend.todoapp-namespace:8000/api/addtask", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

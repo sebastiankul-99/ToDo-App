@@ -4,7 +4,7 @@ import './nav.css';
 const Nav = (props: { name: string, setName: (name: string) => void , setUserID: (userID: string) => void }) => {
 
     const logout = async () => {
-        await fetch('http://localhost:8000/api/signout', {
+        await fetch('https://backend.todoapp-namespace:8000 api/signout', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',

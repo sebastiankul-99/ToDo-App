@@ -15,7 +15,7 @@ const SignIn = (props: { setName: (name: string) => void }) => {
         if (email !== '' && password !== '') {
 
             
-            const response = await fetch("http://localhost:8000/api/signin", {
+            const response = await fetch("https://backend.todoapp-namespace:8000/api/signin", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',

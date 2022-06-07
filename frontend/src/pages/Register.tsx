@@ -16,7 +16,7 @@ const Register = (props: { name: string }) => {
     const submit = async (e: SyntheticEvent) => {
 
         e.preventDefault();
-        const response = await fetch("http://localhost:8000/api/register", {
+        const response = await fetch("https://backend.todoapp-namespace:8000/api/register", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
